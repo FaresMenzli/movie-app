@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Example from './Component/Modal' ;
 
 function App() {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header style={{ 
+          fontWeight:700,
+          fontSize:"20px",
+          backgroundColor: "RGB(234,172,157)",
+          paddingBottom: "20px",
+          color: "white",
+          paddingTop: "20px",
+          marginBottom: "40px",}}>Movie App</header>
+    <Example></Example>
     </div>
-  );
+    )
+  
 }
 
 export default App;

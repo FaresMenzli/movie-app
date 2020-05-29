@@ -1,0 +1,52 @@
+.container {
+  margin-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: space-evenly;
+  grid-gap: 100px;
+  margin-bottom: 50px;
+  justify-items: center;
+
+  /*  display:flex;
+    justify-content: space-around; */
+
+  /* display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+     */
+}
+
+.container div {
+  display: grid;
+  grid-template-rows: 100px 350px 100px 50px;
+  grid-template-columns: 100%;
+
+  background-color: rgb(15, 5, 107);
+  height: 600px;
+  width: 300px;
+}
+
+.h2 {
+  display: flex;
+  color: white;
+  /*background-color: blue;*/
+  height: 100px;
+  align-items: center;
+  justify-self: center;
+}
+.desc {
+  color: white;
+  width: 300px;
+  height: 100px;
+}
+.rating {
+  background-color: gold;
+  height: 50px;
+  font-size: 30px;
+}
+.boutton {
+  margin-top: -40px;
+  display: flex;
+  justify-content: space-evenly;
+}
