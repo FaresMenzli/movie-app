@@ -26,24 +26,30 @@ function Example(props) {
   const [vide, setVide] = useState(true);
   const [etoileappuer, setEtoileappuer] = useState(false);
   const [searchbyrate, setSearchbyrate] = useState(list);
-
+  const [object ,setObject]=useState({Title:"",Image:"",Descr:"",Rating:""})
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+ 
+
+  const Handlechange = (e) =>{
+
+    setObject({...object, [e.target.name]:e.target.value})
+  }
 
   const addmovie = () => {
-    let inter = {};
+  /*   let inter = {};
     Object.assign(inter, {
       Title: document.getElementById("newtitle").value,
       Image: document.getElementById("newimg").value,
       Descr: document.getElementById("newdesc").value,
-      Rating: document.getElementById("newrating").value,
-    });
+      Rating: document.getElementById("newrating").value, setList([...list, inter]);
+    }); */
 
     //console.log(inter)
 
-    setList([...list, inter]);
+    setList([...list, object]);
 
     //props.list(list)
     setShow(false);
@@ -187,7 +193,7 @@ function Example(props) {
                     <span> Title :</span>
                   </td>{" "}
                   <td>
-                    <input id="newtitle"></input>
+                    <input onChange={Handlechange}  name="Title"id="newtitle"></input>
                   </td>
                 </tr>
                 <tr>
@@ -197,7 +203,7 @@ function Example(props) {
                     <span>URL Img :</span>
                   </td>{" "}
                   <td>
-                    <input id="newimg"></input>{" "}
+                    <input onChange={Handlechange} name="Image" id="newimg"></input>{" "}
                   </td>{" "}
                 </tr>
                 <tr>
@@ -208,7 +214,7 @@ function Example(props) {
                   </td>{" "}
                   <td>
                     {" "}
-                    <input id="newdesc"></input>
+                    <input onChange={Handlechange} name ="Descr"id="newdesc"></input>
                   </td>
                 </tr>
                 <tr>
@@ -218,7 +224,7 @@ function Example(props) {
                   </td>{" "}
                   <td>
                     {" "}
-                    <select id="newrating">
+                    <select onChange={Handlechange}  name="Rating" id="newrating">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
